@@ -1,0 +1,9 @@
+user:
+  outputs:
+    default:
+      type: bigquery
+      method: oauth
+      project: kestra-sandbox-450614
+      dataset: zoomcamp
+      location: europe-west2
+  target: default
