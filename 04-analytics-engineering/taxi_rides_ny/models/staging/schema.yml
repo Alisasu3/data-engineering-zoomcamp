@@ -2,9 +2,9 @@ version: 2
 
 sources:
   - name: staging
-    database: kestra-sandbox-450614
-    schema: trips_data_all
-
+    database: "{{ env_var('DBT_DATABASE', 'kestra-sandbox-450614') }}"
+    schema: "{{ env_var('DBT_SCHEMA', 'trips_data_all') }}"
+  
     tables:
       - name: green_tripdata
       - name: yellow_tripdata
