@@ -4,6 +4,6 @@ user:
       type: bigquery
       method: oauth
       project: kestra-sandbox-450614
-      dataset: zoomcamp
+      dataset: trips_data_all
       location: europe-west2
   target: default
