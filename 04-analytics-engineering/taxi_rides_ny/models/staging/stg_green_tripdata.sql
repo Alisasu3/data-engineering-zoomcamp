@@ -1,8 +1,6 @@
-{{
-    config(
-        materialized='view'
-    )
-}}
+  create or replace view `kestra-sandbox-450614`.`prod`.`stg_green_tripdata`
+  OPTIONS(location="europe-west2")
+  as
 
 with tripdata as 
 (
