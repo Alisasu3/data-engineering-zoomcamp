@@ -5,7 +5,6 @@ models:
     description: >
       List of unique zones idefied by locationid. 
       Includes the service zone they correspond to (Green or yellow).
-
   - name: dm_monthly_zone_revenue
     description: >
       Aggregated table of all taxi trips corresponding to both service zones (Green and yellow) per pickup zone, month and service.
@@ -16,17 +15,19 @@ models:
         description: Monthly sum of the the total_amount of the fare charged for the trip per pickup zone, month and service.
         tests:
             - not_null:
-                severity: error
-      
+                severity: error   
   - name: fact_trips
     description: >
       Taxi trips corresponding to both service zones (Green and yellow).
       The table contains records where both pickup and dropoff locations are valid and known zones. 
-      Each record corresponds to a trip uniquely identified by tripid. 
+      Each record corresponds to a trip uniquely identified by tripid.
+
+  - name: fact_trips
+    description: ""
     columns:
       - name: tripid
         data_type: string
-        description: "unique identifier conformed by the combination of vendorid and pickyp time"
+        description: ""
 
       - name: vendorid
         data_type: int64
